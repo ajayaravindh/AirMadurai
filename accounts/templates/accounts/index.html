@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AirMadurai</title>
+		<meta charset="utf-8" />
+		{% load staticfiles %}
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	</head>
+	<body>
+		<section id="banner">
+				<div class="inner split">
+					<section>
+						<center><h2 style="font-family: Pacifico; font-size: 72px;">Air Madurai</h2></center>
+					</section>
+					<section>
+						<p>We are glad that you are here!<br><br>Air Madurai is an earnest attempt by the <i>Brogrammerz</i> to put Madurai on the global airmap.</p>
+						<ul class="actions">
+							<li><a href="#" class="button special">More about us</a></li>
+						</ul>
+					</section>
+
+				</div>
+			</section>
+			{% if user.is_authenticated %}
+					<section style="border: 1px solid black; margin: 10px 100px; padding: 15px;">
+						
+							<center><h2>Welcome <i>{{user.username}}</i></h2></center>
+							<center><a href = "{% url 'logout' %}"><button style="background-color: green"><span style="color: #fff;">Logout</span></button></a></center>
+						
+					</section>
+			{% endif %}
+		<div>
+			{% block content%}
+			{% endblock %}
+		</div>
+			<section id="contact" class="wrapper">
+				<div class="inner split">
+					<section>
+						<h2>Queries</h2>
+						<p>We would be more than happy to answer your queries.<br>We are just making our baby steps. But our vision is something BIG.</p>
+						<form action=" " class="alt" method="POST">
+							<div class="row uniform">
+								<div class="6u 12u$(xsmall)">
+									<input name="name" placeholder="Name" type="text">
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<input name="email" placeholder="Email" type="email">
+								</div>
+								<div class="12u$">
+									<textarea name="message" placeholder="Message" rows="4"></textarea>
+ 								</div>
+ 							</div>
+ 							<ul class="actions">
+ 								<li><input class="alt" value="Send query" type="submit"></li>
+ 							</ul>
+ 						</form>
+ 						<a href="{% url 'feedback' %}"><input type="button" class = alt name="feedback" value="Provide Feedback"></a>
+					</section>
+					<section>
+						<ul class="contact">
+							<li class="fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+							<li class="fa-facebook"><a href="#">facebook.com/untitled-tld</a></li>
+							<li class="fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							<li class="fa-envelope"><a href="#">ajayaravindh55@gmail.com</a></li>
+							<li class="fa-home">Room no: B3<br/>TCE Men's Hostel<br>Madurai</li>
+						</ul>
+					</section>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright" style="color: #000000;">
+					All rights reserved. Brogrammerz<sup>&copy;</sup>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

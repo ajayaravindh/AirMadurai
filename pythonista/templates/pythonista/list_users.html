@@ -1,0 +1,23 @@
+{% extends 'pythonista/index.html' %}
+
+{% block content %}
+<section id="banner">
+				<div class="inner split">
+					<section>
+						<center><h2 style="font-family: Pacifico; font-size: 72px;">Air Madurai</h2></center>
+					</section>
+					<section>
+						<p>We are glad that you are here!<br><br>Air Madurai is an earnest attempt by the <i>Brogrammerz</i> to put Madurai on the global airmap.</p>
+						<ul class="actions">
+							<li><a href="#" class="button special">More about us</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+<div style="background-color: #d5a156;">
+<ul style="margin: 25px 0px 10px 100px;">
+	{% for user in users %}
+		<li><h3>{{user.username}}</h3></li>
+	{% endfor %}
+</ul></div>
+{% endblock %}

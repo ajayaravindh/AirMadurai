@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Freebie: 4 Bootstrap Gallery Templates</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <style type="text/css">
+    	body {
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+}
+
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 70px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    color: #58595a;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 18px;
+    color: #85878c;
+}
+
+.tz-gallery {
+    padding: 40px;
+}
+
+.tz-gallery .thumbnail {
+    padding: 0;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    transition: 0.15s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.tz-gallery .thumbnail:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.tz-gallery .lightbox img {
+    border-radius: 4px 4px 0 0;
+}
+
+.tz-gallery .caption{
+    padding: 26px 30px;
+    text-align: center;
+}
+
+.tz-gallery .caption h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.tz-gallery .caption p {
+    font-size: 12px;
+    color: #7b7d7d;
+    margin: 0;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+    </style>
+
+</head>
+<body>
+
+<div class="container gallery-container">
+
+    <h1>Brogrammerz</h1>
+
+    <p class="page-description text-center">Meet the people behind Air Madurai</p>
+    
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-sm-6 col-md-6">
+                <div class="thumbnail">
+                    <a class="lightbox" href="https://www.facebook.com/profile.php?id=100002093572818">
+                        <img src="{% static 'images/vasanth.jpg' %}">
+                    </a>
+                    <div class="caption">
+                        <h3>Vasantha Vanan</h3>
+                        <p><b>Role - Scrum master, C++ developer</b><br>The one who always wants to be different</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="thumbnail">
+                    <a class="lightbox" href="https://www.facebook.com/pradeep.rahul.31">
+                        <img src="{% static 'images/pradeep.jpg' %}">
+                    </a>
+                    <div class="caption">
+                        <h3>Pradeep Kumar</h3>
+                        <p><b>Role - Tester</b><br>Think web series. Think Pradeep Kumar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="thumbnail">
+                    <a class="lightbox" href="https://www.facebook.com/profile.php?id=100014833865704">
+                        <img src="{% static 'images/lala.jpg' %}">
+                    </a>
+                    <div class="caption">
+                        <h3>Pradeepan Lala</h3>
+                        <p><b>Role - Product owner</b><br>The only one who loves assignments</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="thumbnail">
+                    <a class="lightbox" href="https://www.facebook.com/ganapathi.balaji.IT">
+                        <img src="{% static 'images/ganapathi.jpg' %}">
+                    </a>
+                    <div class="caption">
+                        <h3>Ganapathi Subramanian</h3>
+                        <p><b>Role - Unknown</b><br>Facebook. Whatsapp. Repeat</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-md-3 col-sm-3"></div>
+            <div class="col-sm-6 col-md-6">
+                <div class="thumbnail">
+                    <a class="lightbox" href="https://www.facebook.com/profile.php?id=100011714616845">
+                        <img src="{% static 'images/python.png' %}">
+                    </a>
+                    <div class="caption">
+                        <h3>Ajay Aravindh</h3>
+                        <p><b>Role - Backend developer</b><br></p>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-md-3 col-sm-3"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+</body>
+</html>

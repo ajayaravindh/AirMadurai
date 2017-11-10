@@ -1,0 +1,15 @@
+{% extends 'pythonista/index.html' %}
+{% block content %}
+<div style="margin: 25px 100px 25px 100px;">
+	<h2>Want to tell something to us?</h2><br>
+	<p>Feel free to share with us your experiences, thing you love here, things we could improve, anything you like!</p><br>
+	<div style="margin: 25px 100px;">
+		<form method="POST">
+			{% csrf_token %}
+				{{form.as_p}}
+			<center><button type = 'submit' class = 'btn btn-default'>Save</button></center>
+		</form>
+	</div>
+	<hr>
+</div>	
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'accounts/index.html' %}
+{% block content %}
+  <div class="container">
+    <h2 style="margin: 50px 200px;">Sign up</h2>
+    <div style="margin: 50px 200px;">
+	    <form method = "POST">
+	      {% csrf_token %}
+	      	{{ form.as_p }}
+	      <center><button type="submit" class="btn btn-primary" style="background-color: green;"><span style="color:#fff;">Create an account</span></button></center>
+	    </form>
+	</div>
+  </div>
+{% endblock %}

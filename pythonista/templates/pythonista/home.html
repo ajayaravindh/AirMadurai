@@ -1,0 +1,75 @@
+{% extends 'pythonista/index.html' %}
+{% load staticfiles %}
+{% block content %}
+					
+		<!-- One -->
+			<section id="one" class="wrapper">
+				<div class="inner split">
+					<section>
+						<h2>Madurai</h2>
+						<p>Madurai is the <b>third largest</b> city by population in Tamil Nadu, and is the 25th populated city in India.Located on the banks of <b>River Vaigai</b>, Madurai has been a major settlement for two millennia. Madurai has been selected as one of the hundred Indian cities to be developed as a smart city under Prime Minister Narendra Modi's flagship <b>Smart Cities Mission</b>.</p>
+						<ul class="actions">
+							<li><a href="https://en.wikipedia.org/wiki/Madurai" class="button alt">Learn more</a></li>
+						</ul>
+					</section>
+					<section>
+						<h4>What we do?</h4>
+						<ul class="checklist">
+							<li>We are an alliance of airlines</li>
+							<li>Operate flights from Madurai to major metropolitans of the world</li>
+							<li>Direct flights to Europe, United States, etc.</li>
+							<li>Increase Madurai airport's footfall rate</li>
+							<li>Bring in more airlines into our alliance</li>
+						</ul>
+					</section>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2 alt" style="background-color: #FED">
+				<div class="inner">
+					<div class="spotlight">
+						<div class="image">
+							<img src="{% static 'images/1.jpg' %}" alt="" />
+						</div>
+						<div class="content">
+							<h3>Descend on the Athens of the East</h3>
+							<p>Get ready to witness some of the awe-inspiring structures at Madurai - the Temple city</p>
+							<ul class="actions">
+								<li><a href="{% url 'book' %}/book" class="button alt">Book Tickets</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="spotlight">
+						<div class="image">
+							<img src="{% static 'images/2.jpg' %}" alt="" />
+						</div>
+						<div class="content">
+							<h3>Fly from Madurai</h3>
+							<p>We currently fly to 26 major metropolitan cities of the world. We look forward to fly to more destinations in the future.</p>
+							<ul class="actions">
+								<li><a href="{% url 'book' %}/book" class="button alt">Book Tickets</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="spotlight">
+						<div class="image">
+							<img src="{% static 'images/3.jpg' %}" alt="" />
+						</div>
+						<div class="content">
+							<h3>Not a member yet?</h3>
+							<p>Become a part of this wonderful journey by <i>signing up</i> with us.</p>
+							<ul class="actions">
+								<li><a href="{% url 'register' %}" class="button alt">Signup</a></li>
+							</ul>
+						</div>
+					</div>
+					{% if user.is_authenticated %}
+					{% else %}
+					<ul class="actions special">
+						<p>Already a member?</p><li><a href="{% url 'login' %}" class="button alt">Login</a></li>
+					</ul>
+					{% endif %}
+				</div>
+			</section>
+{% endblock %}

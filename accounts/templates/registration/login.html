@@ -1,0 +1,14 @@
+{% extends 'accounts\index.html' %}
+
+{% block content %}
+	<div style="margin: 50px 200px;">
+		<form method="POST">
+			{% csrf_token %}
+				<p><b>Username</b></p>
+				<input type="text" name="username">
+				<p><b>Password</b></p>
+				<input type="password" name="password">
+			<center><button type="submit" style="background-color: green;"><span style="color: #fff;">Login</span></button></center>
+		</form>
+	</div>
+{% endblock %}
